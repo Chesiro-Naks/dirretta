@@ -6,7 +6,7 @@ def scrape_title(url):
     options.add_argument('--headless')  
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome(options=options)  
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.get(url)  
     title = driver.title  
     driver.quit()  
